@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.pruebaTecnica.prevalentware.PrevalentwareApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-05T22:33:57" hostname="LAPTOP-648MOK2P" time="0.071">
+  <properties/>
+  <testcase name="givenAnUnauthorizedUserWhenGetAllThenThrows()" classname="com.pruebaTecnica.prevalentware.PrevalentwareApplicationTests" time="0.071"/>
+  <system-out><![CDATA[17:33:51.008 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.pruebaTecnica.prevalentware.PrevalentwareApplicationTests]: PrevalentwareApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:33:51.122 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.pruebaTecnica.prevalentware.PrevalentwareApplication for test class com.pruebaTecnica.prevalentware.PrevalentwareApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2023-12-05T17:33:51.580-05:00  INFO 28212 --- [    Test worker] c.p.p.PrevalentwareApplicationTests      : Starting PrevalentwareApplicationTests using Java 18.0.2.1 with PID 28212 (started by Johan Castiblanco in C:\Users\Johan Castiblanco\Desktop\prevalentware)
+2023-12-05T17:33:51.582-05:00  INFO 28212 --- [    Test worker] c.p.p.PrevalentwareApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2023-12-05T17:33:52.549-05:00  INFO 28212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T17:33:52.656-05:00  INFO 28212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 6 JPA repository interfaces.
+2023-12-05T17:33:54.416-05:00  INFO 28212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-05T17:33:54.755-05:00  INFO 28212 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:~/database user=USER
+2023-12-05T17:33:54.761-05:00  INFO 28212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-05T17:33:54.860-05:00  INFO 28212 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T17:33:54.974-05:00  INFO 28212 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-05T17:33:55.042-05:00  INFO 28212 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-05T17:33:55.239-05:00  INFO 28212 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T17:33:55.340-05:00  WARN 28212 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2023-12-05T17:33:55.349-05:00  WARN 28212 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T17:33:56.324-05:00  INFO 28212 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists "Country" cascade
+Hibernate: drop table if exists "Role" cascade
+Hibernate: drop table if exists "Session" cascade
+Hibernate: drop table if exists "User" cascade
+Hibernate: drop table if exists "UserMonitoring" cascade
+Hibernate: drop table if exists _prisma_migrations cascade
+Hibernate: drop sequence if exists _prisma_migrations_SEQ
+Hibernate: drop sequence if exists Country_SEQ
+Hibernate: drop sequence if exists Role_SEQ
+Hibernate: drop sequence if exists User_SEQ
+Hibernate: drop sequence if exists UserMonitoring_SEQ
+Hibernate: create sequence _prisma_migrations_SEQ start with 1 increment by 50
+Hibernate: create sequence Country_SEQ start with 1 increment by 50
+Hibernate: create sequence Role_SEQ start with 1 increment by 50
+Hibernate: create sequence User_SEQ start with 1 increment by 50
+Hibernate: create sequence UserMonitoring_SEQ start with 1 increment by 50
+Hibernate: create table "Country" ("createdAt" timestamp(6), "updatedAt" timestamp(6), id varchar(255) not null, name varchar(255), primary key (id))
+Hibernate: create table "Role" ("createdAt" varchar(255), id varchar(255) not null, name varchar(255), primary key (id))
+Hibernate: create table "Session" ("createdAt" timestamp(6), "expiresAt" timestamp(6), id varchar(255) not null, "sessionToken" varchar(255), "userId" varchar(255), primary key (id))
+Hibernate: create table "User" ("createdAt" timestamp(6), "emailVerified" timestamp(6), "termsAndConditionsAccepted" timestamp(6), "updatedAt" timestamp(6), email varchar(255), id varchar(255) not null, image varchar(255), name varchar(255), position varchar(255), "roleId" varchar(255), primary key (id))
+Hibernate: create table "UserMonitoring" ("createdAt" date, usage integer not null, description varchar(255), id varchar(255) not null, "userId" varchar(255), primary key (id))
+Hibernate: create table _prisma_migrations (applied_steps_count integer, finished_at timestamp(6), rolled_back_at timestamp(6), started_at timestamp(6), checksum varchar(255), id varchar(255) not null, logs varchar(255), migration_name varchar(255), primary key (id))
+2023-12-05T17:33:56.387-05:00  INFO 28212 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T17:33:57.111-05:00  WARN 28212 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-05T17:33:57.830-05:00  INFO 28212 --- [    Test worker] c.p.p.PrevalentwareApplicationTests      : Started PrevalentwareApplicationTests in 6.521 seconds (process running for 8.328)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
